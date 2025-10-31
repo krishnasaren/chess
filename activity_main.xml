@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1a1a2e"
+    android:padding="20dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="♔ CHESS MASTER ♔"
+        android:textSize="32sp"
+        android:textColor="#eaeaea"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingTop="20dp"
+        android:paddingBottom="30dp" />
+
+    <!-- Status Text -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="White's Turn"
+        android:textSize="22sp"
+        android:textColor="#00d4ff"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp" />
+
+    <!-- Chess Board (Custom View) -->
+    <elrasseo.syreao.checkmate.ChessBoardCustomView
+        android:id="@+id/chessBoardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Game Mode Label -->
+    <TextView
+        android:id="@+id/modeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Game Mode:"
+        android:textSize="18sp"
+        android:textColor="#eaeaea"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
+
+    <!-- Game Mode Selection -->
+    <RadioGroup
+        android:id="@+id/gameModeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="2dp">
+
+        <RadioButton
+            android:id="@+id/vsComputerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="vs Computer"
+            android:textColor="#eaeaea"
+            android:checked="true"
+            android:layout_marginEnd="20dp" />
+
+        <RadioButton
+            android:id="@+id/vsPlayerBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="vs Player"
+            android:textColor="#eaeaea" />
+    </RadioGroup>
+
+    <!-- Difficulty Selection (Only for vs Computer) -->
+    <TextView
+        android:id="@+id/difficultyLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AI Difficulty:"
+        android:textSize="18sp"
+        android:textColor="#eaeaea"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
+
+    <RadioGroup
+        android:id="@+id/difficultyGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="0dp">
+
+        <RadioButton
+            android:id="@+id/easyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Easy"
+            android:textColor="#eaeaea"
+            android:layout_marginEnd="15dp" />
+
+        <RadioButton
+            android:id="@+id/mediumBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:textColor="#eaeaea"
+            android:checked="true"
+            android:layout_marginEnd="15dp" />
+
+        <RadioButton
+            android:id="@+id/hardBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hard"
+            android:textColor="#eaeaea" />
+    </RadioGroup>
+
+    <!-- New Game Button -->
+    <Button
+        android:id="@+id/newGameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="NEW GAME"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#00d4ff"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp" />
+
+</LinearLayout>
