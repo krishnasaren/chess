@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#0f0f1e"
+    android:fillViewport="true"
+    tools:context=".Settings"
+    android:id="@+id/settings">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚙️ SETTINGS"
+            android:textSize="28sp"
+            android:textColor="#FFD700"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:paddingBottom="30dp" />
+
+        <!-- Theme Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Board Theme"
+            android:textSize="20sp"
+            android:textColor="#00d4ff"
+            android:textStyle="bold"
+            android:paddingBottom="10dp" />
+
+        <RadioGroup
+            android:id="@+id/themeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:paddingStart="20dp">
+
+            <RadioButton
+                android:id="@+id/themeClassic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Classic (Brown)"
+                android:textColor="#eaeaea"
+                android:textSize="16sp"
+                android:checked="true"
+                android:buttonTint="#00d4ff"
+                android:paddingBottom="8dp" />
+
+            <RadioButton
+                android:id="@+id/themeDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dark Mode (Gray)"
+                android:textColor="#eaeaea"
+                android:textSize="16sp"
+                android:buttonTint="#00d4ff"
+                android:paddingBottom="8dp" />
+
+            <RadioButton
+                android:id="@+id/themeBlue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Blue Ocean"
+                android:textColor="#eaeaea"
+                android:textSize="16sp"
+                android:buttonTint="#00d4ff"
+                android:paddingBottom="8dp" />
+
+            <RadioButton
+                android:id="@+id/themeWood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wooden Board"
+                android:textColor="#eaeaea"
+                android:textSize="16sp"
+                android:buttonTint="#00d4ff" />
+        </RadioGroup>
+
+        <!-- Sound & Effects Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sound Effects"
+            android:textSize="20sp"
+            android:textColor="#00d4ff"
+            android:textStyle="bold"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Sound Effects"
+                android:textColor="#eaeaea"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/soundSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:thumbTint="#00d4ff"
+                android:trackTint="#1a1a2e" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Vibration"
+                android:textColor="#eaeaea"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/vibrationSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:thumbTint="#00d4ff"
+                android:trackTint="#1a1a2e" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingBottom="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Animations"
+                android:textColor="#eaeaea"
+                android:textSize="16sp" />
+
+            <Switch
+                android:id="@+id/animationSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:thumbTint="#00d4ff"
+                android:trackTint="#1a1a2e" />
+        </LinearLayout>
+
+        <!-- Volume Control -->
+        <TextView
+            android:id="@+id/volumeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Volume: 50%"
+            android:textColor="#eaeaea"
+            android:textSize="16sp"
+            android:paddingStart="20dp"
+            android:paddingBottom="10dp" />
+
+        <SeekBar
+            android:id="@+id/volumeSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="50"
+            android:progressTint="#00d4ff"
+            android:thumbTint="#00d4ff"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:paddingBottom="20dp" />
+
+        <!-- App Info Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:textSize="20sp"
+            android:textColor="#00d4ff"
+            android:textStyle="bold"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" />
+
+        <TextView
+            android:id="@+id/versionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Version 2.0.0"
+            android:textColor="#aaaaaa"
+            android:textSize="14sp"
+            android:paddingStart="20dp"
+            android:paddingBottom="10dp" />
+
+        <Button
+            android:id="@+id/aboutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📖 About Chess Master"
+            android:textSize="16sp"
+            android:backgroundTint="#1a1a2e"
+            android:textColor="#00d4ff"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💾 SAVE SETTINGS"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="#00d4ff"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp" />
+
+    </LinearLayout>
+</ScrollView>

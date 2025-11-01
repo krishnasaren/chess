@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0f0f1e"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header with Title and Settings -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="♔ CHESS MASTER ♔"
+                android:textSize="28sp"
+                android:textColor="#FFD700"
+                android:textStyle="bold"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3" />
+
+            <ImageButton
+                android:id="@+id/settingsButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_preferences"
+                android:tint="#FFD700"
+                android:contentDescription="Settings" />
+        </RelativeLayout>
+
+        <!-- Status Text -->
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="White's Turn"
+            android:textSize="20sp"
+            android:textColor="#00d4ff"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:paddingTop="5dp"
+            android:paddingBottom="15dp"
+            android:background="#1a1a2e"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Chess Board -->
+        <elrasseo.syreao.checkmate.ChessBoardCustomView
+            android:id="@+id/chessBoardView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Move History -->
+        <TextView
+            android:id="@+id/moveHistoryLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Move History"
+            android:textSize="16sp"
+            android:textColor="#eaeaea"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#1a1a2e"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/moveHistoryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Move History:\n"
+                android:textSize="12sp"
+                android:textColor="#aaaaaa"
+                android:fontFamily="monospace" />
+        </ScrollView>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp">
+
+            <Button
+                android:id="@+id/undoButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="↶ UNDO"
+                android:textSize="14sp"
+                android:backgroundTint="#ff6b6b"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/newGameButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🆕 NEW GAME"
+                android:textSize="14sp"
+                android:backgroundTint="#00d4ff"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/hintButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="💡 HINT"
+                android:textSize="14sp"
+                android:backgroundTint="#51cf66" />
+        </LinearLayout>
+
+        <!-- Game Mode Label -->
+        <TextView
+            android:id="@+id/modeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Game Mode"
+            android:textSize="18sp"
+            android:textColor="#FFD700"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:paddingBottom="8dp" />
+
+        <!-- Game Mode Selection -->
+        <RadioGroup
+            android:id="@+id/gameModeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="5dp">
+
+            <RadioButton
+                android:id="@+id/vsComputerBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🤖 vs AI"
+                android:textColor="#eaeaea"
+                android:checked="true"
+                android:buttonTint="#00d4ff" />
+
+            <RadioButton
+                android:id="@+id/vsPlayerBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="👥 vs Player"
+                android:textColor="#eaeaea"
+                android:buttonTint="#00d4ff" />
+
+            <RadioButton
+                android:id="@+id/onlineBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🌐 Online"
+                android:textColor="#eaeaea"
+                android:buttonTint="#00d4ff" />
+        </RadioGroup>
+
+        <!-- AI Difficulty Selection -->
+        <TextView
+            android:id="@+id/difficultyLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AI Difficulty"
+            android:textSize="18sp"
+            android:textColor="#FFD700"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
+            android:paddingBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/difficultyGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/easyBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Easy"
+                android:textColor="#51cf66"
+                android:buttonTint="#51cf66" />
+
+            <RadioButton
+                android:id="@+id/mediumBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Medium"
+                android:textColor="#ffd43b"
+                android:checked="true"
+                android:buttonTint="#ffd43b" />
+
+            <RadioButton
+                android:id="@+id/hardBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hard"
+                android:textColor="#ff6b6b"
+                android:buttonTint="#ff6b6b" />
+
+            <RadioButton
+                android:id="@+id/expertBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Expert"
+                android:textColor="#c92a2a"
+                android:buttonTint="#c92a2a" />
+        </RadioGroup>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#0f0f1e"
+    android:gravity="center"
+    android:padding="30dp"
+    tools:context=".OnlineMatchmaking"
+    android:id="@+id/matchmaking">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🌐 ONLINE MATCHMAKING"
+        android:textSize="26sp"
+        android:textColor="#FFD700"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="40dp" />
+
+    <!-- Icon/Animation Area -->
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@android:drawable/ic_menu_search"
+        android:tint="#00d4ff"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="Search icon" />
+
+    <!-- Status Text -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ready to find an opponent"
+        android:textSize="18sp"
+        android:textColor="#eaeaea"
+        android:gravity="center"
+        android:paddingBottom="20dp" />
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:progressTint="#00d4ff"
+        android:visibility="gone"
+        android:layout_marginBottom="30dp" />
+
+    <!-- Info Box -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#1a1a2e"
+        android:padding="20dp"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📊 Your Stats"
+            android:textSize="18sp"
+            android:textColor="#00d4ff"
+            android:textStyle="bold"
+            android:paddingBottom="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Rating:"
+                android:textColor="#aaaaaa"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1200"
+                android:textColor="#FFD700"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Games Played:"
+                android:textColor="#aaaaaa"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#eaeaea"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Win Rate:"
+                android:textColor="#aaaaaa"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textColor="#51cf66"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Find Match Button -->
+    <Button
+        android:id="@+id/findMatchButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🎮 FIND MATCH"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="#00d4ff"
+        android:textColor="#FFFFFF"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_marginBottom="15dp" />
+
+    <!-- Cancel Button -->
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="❌ CANCEL"
+        android:textSize="16sp"
+        android:backgroundTint="#ff6b6b"
+        android:textColor="#FFFFFF"
+        android:enabled="false"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp" />
+
+    <!-- Note -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⚠️ Note: Online matchmaking requires internet connection"
+        android:textSize="12sp"
+        android:textColor="#888888"
+        android:gravity="center"
+        android:paddingTop="30dp"
+        android:lineSpacingExtra="4dp" />
+
+</LinearLayout>
